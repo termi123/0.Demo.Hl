@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="msg_new_version">Exist a new version.\nDon\'t forget to do a click in the ads :D</string>
+    <string name="visit_page">Visit the page</string>
+    <string name="remind_later">Remind me later</string>
+    <string name="remind_never">Don\'t remind me again</string>
+    <string name="go_other_list">Go to the other list</string>
+    <string name="you_have_the_last_version">You have the last version ^_^</string>
+</resources>

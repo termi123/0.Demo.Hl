@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/side_bar_background">
+    
+    <RelativeLayout
+        android:id="@+id/view_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <view
+                android:id="@+id/btnPreviousPage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                class="com.example.demo.hl.component.ActionImageButton"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/previous_page"
+                android:scaleType="fitXY"
+                android:src="@drawable/navigation_previous_item_inverse" />
+
+            <TextView
+                android:id="@+id/tvPage"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="Page 1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/main_color" />
+
+            <view
+                android:id="@+id/btnNextPage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                class="com.example.demo.hl.component.ActionImageButton"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/next_page"
+                android:scaleType="fitXY"
+                android:src="@drawable/navigation_next_item_inverse" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll"
+            android:layout_margin="5dp"
+            android:scrollbars="horizontal"
+            android:divider="@color/side_bar_lines"
+            android:dividerHeight="1dp"
+            android:background="@color/side_bar_background">
+        </ListView>
+
+        <TextView
+            android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/view_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/loading"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+</RelativeLayout>
